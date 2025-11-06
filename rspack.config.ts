@@ -33,11 +33,8 @@ export default defineConfig((_, argv) => ({
   output: {
     // You need to set a unique value that is not equal to other applications
     uniqueName: "host",
-    // publicPath must be configured if using manifest
-    publicPath:
-      argv.mode === "development"
-        ? "http://localhost:3000/"
-        : "https://mf-host-nar.netlify.app/",
+    // publicPath auto will automatically detect the correct URL
+    publicPath: argv.mode === "development" ? "http://localhost:3000/" : "auto",
   },
 
   experiments: {
