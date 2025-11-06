@@ -24,6 +24,11 @@ export default defineConfig((_, argv) => ({
     port: 3000,
     historyApiFallback: true,
     watchFiles: [path.resolve(__dirname, "src")],
+    open: {
+      app: {
+        name: "Firefox Developer Edition",
+      },
+    },
   },
   output: {
     // You need to set a unique value that is not equal to other applications
