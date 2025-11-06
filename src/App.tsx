@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <>
-      <h1 className="text-center bg-dark text-white p-2">Color Picker</h1>
+      <h1 className="text-center bg-dark text-white p-2">Colors Picker</h1>
       <div className="container mt-4">
         <div className="row">
           <div className="col-12 col-md-4">
