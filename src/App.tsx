@@ -3,6 +3,7 @@ import ColorPicker from "colorPicker/ColorPicker";
 import ColorList from "colorList/ColorList";
 import { useColors } from "colorPicker/useColors";
 
+// Main App component
 const App = () => {
   const {
     color,
