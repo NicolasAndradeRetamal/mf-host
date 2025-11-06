@@ -11,7 +11,7 @@ const isDev = process.env.NODE_ENV === "development";
 // Target browsers, see: https://github.com/browserslist/browserslist
 const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"];
 
-export default defineConfig({
+export default defineConfig((_, argv) => ({
   context: __dirname,
   entry: {
     main: "./src/index.ts",
@@ -29,7 +29,10 @@ export default defineConfig({
     // You need to set a unique value that is not equal to other applications
     uniqueName: "host",
     // publicPath must be configured if using manifest
-    publicPath: "https://color-picker-nar.netlify.app/",
+    publicPath:
+      argv.mode === "development"
+        ? "http://localhost:3000/"
+        : "https://mf-host-nar.netlify.app/",
   },
 
   experiments: {
@@ -88,4 +91,4 @@ export default defineConfig({
       }),
     ],
   },
-});
+}));
